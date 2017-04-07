@@ -1,24 +1,28 @@
-<resources>
+<resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
     <string name="app_name">Stock Hawk</string>
 
     <string name="pref_stocks_initialized_key" translatable="false">initialized</string>
 
-    <string name="pref_stocks_key">stocks</string>
+    <string name="pref_stocks_key" translatable="false">stocks</string>
 
 
-    <string name="pref_display_mode_key">displayMode</string>
-    <string name="pref_display_mode_default">@string/pref_display_mode_percentage_key</string>
+    <string name="pref_display_mode_key" translatable="false">displayMode</string>
+    <string name="pref_display_mode_default" translatable="false">@string/pref_display_mode_percentage_key</string>
 
     <string name="pref_display_mode_absolute_key">absolute</string>
     <string name="pref_display_mode_percentage_key">percentage</string>
 
-    <string name="default_stocks_yahoo">YHOO</string>
-    <string name="default_stocks_apple">AAPL</string>
-    <string name="default_stocks_microsoft">MSFT</string>
-    <string name="default_stocks_facebook">FB</string>
+    <string name="pref_network_status" translatable="false">net-status</string>
+
+    <string name="default_stocks_yahoo" translatable="false">YHOO</string>
+    <string name="default_stocks_apple" translatable="false">AAPL</string>
+    <string name="default_stocks_microsoft" translatable="false">MSFT</string>
+    <string name="default_stocks_facebook" translatable="false">FB</string>
 
 
-    <string name="action_change_units">@string/pref_display_mode_key</string>
+    <string name="action_change_units" translatable="false">@string/pref_display_mode_key</string>
+
+    <string name="activity_title_DETAIL">Stock Details</string>
 
 
     <string name="dialog_title">Add Stock</string>
@@ -27,9 +31,26 @@
     <string name="dialog_add">Add</string>
 
     <string name="error_no_network">No network connectivity! Will load stock cursor when the network is available.</string>
+    <string name="error_server_error">An error occurred while contacting the server. Please try refreshing, or try again later.</string>
     <string name="error_no_stocks">No stocks added! Hit the floating action button to add one.</string>
+    <string name="error_unknown">An unknown error has occurred. Please try refreshing, or try again later.</string>
+
+    <string name="error_invalid_stock_name_FORMAT">%s (INVALID STOCK SYMBOL)</string>
+    <string name="broadcast_invalid_stock" translatable="false">com.udacity.stockhawk.BROADCAST_INVALID_STOCK</string>
+    <string name="toast_invalid_stock_name_FORMAT">ERROR: %s is an invalid stock symbol and was not added</string>
 
     <string name="toast_stock_added_no_connectivity">Symbol %s added. Will refresh when network available.</string>
     <string name="toast_no_connectivity">Will refresh when network available.</string>
 
+    <string name="widget_empty">No data to display. Please open Stock Hawk to diagnose.</string>
+    <string name="stocks_out_of_date">Some stock records are over a week old.</string>
+    <string name="refresh">Refresh</string>
+
+    <string name="CD_fab">Add stock symbol</string>
+    <string name="CD_display_mode">Set change display mode. Current setting: %s</string>
+    <string name="CD_back">Go back to home page</string>
+    <string name="CD_show_history">View stock history</string>
+    <string name="CD_hide_history">Hide stock history</string>
+
+    <string name="format_change_detail"><xliff:g id="raw_change">%1$s</xliff:g> (<xliff:g id="percentage_change">%2$s</xliff:g>)</string>
 </resources>

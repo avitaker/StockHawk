@@ -23,6 +23,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ui.DetailActivity"
+            android:parentActivityName=".ui.MainActivity"/>
+
         <service
             android:name=".sync.QuoteIntentService"
             android:exported="false" />
@@ -37,6 +40,18 @@
             android:enabled="true"
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver android:name=".widget.AllStocksWidgetProvider"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.udacity.stockhawk.ACTION_DATA_UPDATED"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                       android:resource="@xml/widget_provider_info"/>
+        </receiver>
+        <service android:name=".widget.AllStocksWidgetIntentService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"/>
     </application>
 
 </manifest>
